@@ -12,9 +12,12 @@
     --small-label-color: #747474;
 }
 
+
+
 body {
     font-family: "Roboto", sans-serif;
     background: #e7e7e7;
+    padding: 1em;
 }
 
 label:not(.small_label, .check_label) {
@@ -52,7 +55,7 @@ label:not(.small_label, .check_label) {
 .hor {
     display: flex;
     width: 100%;
-
+    flex-direction: column;
 }
 
 .hor div {
@@ -98,14 +101,6 @@ input:hover , select:hover, textarea:hover {
 
 
 
-.right {
-    align-self: flex-end;
-    width: 100%;
-}
-
-.right_label {
-    margin-left: 4em;
-}
 
 
 textarea {
@@ -148,4 +143,20 @@ textarea {
 
 .submit_button:hover {
     background: lightgreen;
+}
+
+
+@media screen and (min-width: 800px) {
+    .hor {
+        flex-direction: row;
+    }
+
+    .right {
+        align-self: flex-end;
+        width: 100%;
+    }
+    
+    .right_label {
+        margin-left: 4em;
+    }
 }
